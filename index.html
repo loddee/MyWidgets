@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="greet.js"></script>
+    <script src="airtime.js"></script>
+    <script src="days.js"></script>
+    <script src="numplate.js"></script>
+    <link rel="stylesheet" href="stayle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>BootCamp Functions Widgets</h1>
+    </div>
+    <div class="Upper-Container">
+
+        <div class="greet-Wedgit">
+
+            <body class="bg-gray-400 ">
+
+                <div>
+
+                    <div class="topContaner bg-blue-150 mx-auto text-white  text-center
+                    italic">
+                        <h2>Greet Widget</h2>
+                    </div>
+
+                    <div x-data="{name:'',
+                        showGreet:false,
+                        message:'', 
+                        greetMe(){
+                        this.message = greet(this.name);
+                        setTimeout(() => {this.message='';
+                        },4000);
+                    }
+                    }">
+                        <div x-text="message" class="  message bg-blue-100 py-2 px-2" x-show="message.length> 0">
+                            <h3>Your greeted here....</h3>
+                        </div>
+
+                        <label for="name">Enter your name</label>
+                        <input type="text" x-model="name" id="name">
+                        <button class="bg-blue-700 hover: red-200 text-white font-bold py-2 px-4 rounded" x-on:click="greetMe">Greet!</button>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </body>
+
+        </div>
+        <div class="enoughAirtime-Wedgit">
+            <div class="Container ">
+
+
+                <div class="topContaner bg-#fca5a5 mx-auto text-white text-center
+                italic py-2 px-2">
+                    <h2>Airtime Widget</h2>
+                </div>
+
+                <div x-data="{AirtimeUsage:'',
+                    showAirtimeUsage: false,
+                    AvalableAmount: '0.00',
+                    AirtimeMessage:'', 
+                    calculate(){
+                       this.AirtimeMessage = enoughAirtime(this.AirtimeUsage,this.AvalableAmount);
+                       setTimeout(() => {this.AirtimeMessage='';
+                        },4000);
+                    }
+                    
+                }">
+                    <div x-text="AirtimeMessage" class="  message bg-blue-100 py-2 px-2">
+                        <h3>Your greeted here....</h3>
+                    </div>
+
+                    <div class=" input py-2 px-2 text-center ">
+                        <label for="usage ">Enter airtime Usages</label>
+                        <input type="text " x-model="AirtimeUsage " id="usage ">
+                    </div>
+
+                    <div class="py-2 px-2 text-center ">
+                        <label for="amount ">The Avalable Amount</label>
+                        <input type="text " x-model="AvalableAmount " id="amount ">
+                    </div>
+                    <div class="button text-center ">
+                        <button class="bg-blue-700 hover: red-200 text-white font-bold py-2 px-4 rounded text-center " x-on:click="calculate ">Calculate Usge Airtime</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <hr>
+
+    <div class="lower-Container ">
+        <div class="Days-Wedgit">
+            <div class="topContaner bg-blue-150 mx-auto text-white text-center
+            italic">
+                <h2>Week Widget</h2>
+            </div>
+
+            <div x-data="{day:'',
+                showDay:false,
+                message:'', 
+                find(){
+                this.message = weekOrWeekend(this.day);
+                setTimeout(() => {this.message='';
+                },4000);
+            }
+            }">
+                <div x-text="message" class="message bg-blue-100 py-2 px-2" x-show="message.length> 0">
+                    <h3>Your greeted here....</h3>
+                </div>
+
+                <label for="day">Enter a day</label>
+                <input type="text" x-model="day" id="day">
+                <button class="bg-blue-700 hover: red-200 text-white font-bold py-2 px-4 rounded" x-on:click="find">Enter!</button>
+
+            </div>
+        </div>
+        <div>
+
+            <div class=" bg-blue-150 mx-auto text-white text-center
+            italic">
+                <h2>kappa Widget</h2>
+            </div>
+
+            <div x-data="{regNumber:'',
+                showKappa:false,
+                message:'', 
+                check(){
+                this.message = isFromCapeTown(this.regNumber);
+                setTimeout(() => {this.message='';
+                },4000);
+            }
+            }">
+                <div x-text="message" class="  message bg-blue-100 py-2 px-2">
+                    <h3>Your greeted here....</h3>
+                </div>
+
+                <label for="regNumber">Enter a number Plate</label>
+                <input type="text" x-model="regNumber" id="regNumber">
+                <button class="bg-blue-700 hover: red-200 text-white font-bold py-2 px-4 rounded" x-on:click='check'>Search!</button>
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

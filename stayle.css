@@ -1,0 +1,53 @@
+.Upper-Container {
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.lower-Container {
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 3.625em;
+    margin: 15px auto 0 auto;
+    font-family: 'Sacramento', cursive;
+    font-weight: bolder;
+    color: #bf66a0;
+    line-height: 2em;
+    justify-content: center;
+    padding-left: 90px;
+    padding-right: 60px;
+    text-align: center;
+}
+
+.greet-Wedgit {
+    padding-left: 70px;
+}
+
+.enoughAirtime-Wedgit {
+    padding-right: 70px;
+}
+
+hr {
+    border: dotted #EAF6F6 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 50px auto;
+}
+
+label {
+    text-decoration-color: black;
+}
+
+.kappa {
+    padding-left: 70px;
+}
+
+.Days-Wedgit {
+    padding-right: 70px;
+}
