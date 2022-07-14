@@ -1,3 +1,8 @@
+body {
+    margin: 10px;
+    background-color: lightgrey;
+}
+
 .Upper-Container {
     justify-content: center;
     display: flex;
@@ -14,7 +19,7 @@
 
 h1 {
     font-size: 3.625em;
-    margin: 15px auto 0 auto;
+    margin: 15px;
     font-family: 'Sacramento', cursive;
     font-weight: bolder;
     color: #bf66a0;
@@ -50,4 +55,15 @@ label {
 
 .Days-Wedgit {
     padding-right: 70px;
+}
+
+button {
+    background-color: rgb(2, 158, 225);
+    border: none;
+    color: white;
+}
+
+.message {
+    background-color: lightsteelblue;
+    padding: 1em
 }

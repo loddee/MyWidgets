@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="stayle.css">
+
     <script src="greet.js"></script>
     <script src="airtime.js"></script>
     <script src="days.js"></script>
     <script src="numplate.js"></script>
-    <link rel="stylesheet" href="stayle.css">
+
     <title>Document</title>
 </head>
 
@@ -41,7 +42,7 @@
                         },4000);
                     }
                     }">
-                        <div x-text="message" class="  message bg-blue-100 py-2 px-2" x-show="message.length> 0">
+                        <div x-text="message" class="message" x-show="message.length> 0">
                             <h3>Your greeted here....</h3>
                         </div>
 
